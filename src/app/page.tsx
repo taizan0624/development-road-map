@@ -12,13 +12,13 @@ import { Lightbulb, Loader2 } from 'lucide-react';
 
 const initialLanesData: Lane[] = [
   {
-    id: 'releases',
-    title: 'Releases',
+    id: 'planning',
+    title: 'Planning',
     color: 'hsl(340 72% 50%)', // Pink/Red
     textColor: 'text-white',
     tasks: [
-      { id: 'task-r1', content: 'V1.0.0 Release' },
-      { id: 'task-r2', content: 'V1.0.1 Patch' },
+      { id: 'task-pl1', content: 'Q3 Roadmap Planning' },
+      { id: 'task-pl2', content: 'Define V2.0.0 Scope' },
     ],
   },
   {
