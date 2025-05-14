@@ -46,15 +46,15 @@ const initialLanesData: Lane[] = [
     ],
   },
   {
-    id: 'ux-ui',
-    title: 'UX & UI',
+    id: 'ideas', // Was 'ux-ui'
+    title: 'Ideas', // Was 'UX & UI'
     color: 'hsl(180 65% 40%)', // Teal
     textColor: 'text-white',
     tasks: [
-      { id: 'task-ux1', content: 'User Persona Definition' },
-      { id: 'task-ux2', content: 'Wireframing Key Screens' },
-      { id: 'task-ux3', content: 'High-Fidelity Mockups' },
-      { id: 'task-ux4', content: 'Usability Testing Round 1' },
+      { id: 'task-id1', content: 'Brainstorm new feature concepts' },
+      { id: 'task-id2', content: 'Gather user feedback on pain points' },
+      { id: 'task-id3', content: 'Explore integration possibilities' },
+      { id: 'task-id4', content: 'Research innovative technologies' },
     ],
   },
   {
