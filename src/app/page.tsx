@@ -22,39 +22,27 @@ const initialLanesData: Lane[] = [
     ],
   },
   {
-    id: 'milestones',
-    title: 'Milestones',
-    color: 'hsl(28 100% 53%)', // Orange
+    id: 'development', // Was 'milestones'
+    title: 'Development', // Was 'Milestones'
+    color: 'hsl(28 100% 53%)', // Orange (color inherited from original Milestones lane)
     textColor: 'text-white',
-    tasks: [
-      { id: 'task-m1', content: 'Project Kick-off' },
-      { id: 'task-m2', content: 'Alpha Release' },
-      { id: 'task-m3', content: 'Beta Program Launch' },
-      { id: 'task-m4', content: 'Achieve 1,000 Active Users' },
-    ],
-  },
-  {
-    id: 'product',
-    title: 'Product Features',
-    color: 'hsl(45 100% 51%)', // Yellow
-    textColor: 'text-neutral-800',
-    tasks: [
-      { id: 'task-p1', content: 'User Authentication System' },
-      { id: 'task-p2', content: 'Dashboard UI/UX Design' },
-      { id: 'task-p3', content: 'Reporting Module' },
-      { id: 'task-p4', content: 'Third-party API Integration (e.g., Stripe)' },
-    ],
-  },
-  {
-    id: 'dev',
-    title: 'Development',
-    color: 'hsl(120 50% 45%)', // Green
-    textColor: 'text-white',
-    tasks: [
+    tasks: [ // Tasks from the original 'dev' lane
       { id: 'task-d1', content: 'Setup CI/CD Pipeline' },
       { id: 'task-d2', content: 'Backend API for User Profiles' },
       { id: 'task-d3', content: 'Frontend Component Library Setup' },
       { id: 'task-d4', content: 'Database Schema Design' },
+    ],
+  },
+  {
+    id: 'upcoming-release', // Was 'product'
+    title: 'Upcoming Release', // Was 'Product Features'
+    color: 'hsl(45 100% 51%)', // Yellow (color inherited from original Product Features lane)
+    textColor: 'text-neutral-800',
+    tasks: [
+      { id: 'task-ur1', content: 'Finalize V2.0.0 Feature Set' },
+      { id: 'task-ur2', content: 'Alpha Release Candidate Build' },
+      { id: 'task-ur3', content: 'User Acceptance Testing (UAT)' },
+      { id: 'task-ur4', content: 'Prepare Launch Communications' },
     ],
   },
   {
@@ -253,3 +241,4 @@ export default function RoadmapperPage() {
     </div>
   );
 }
+
