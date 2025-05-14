@@ -1,6 +1,7 @@
+
 'use client';
 
-import type { Lane, Task } from '@/types';
+import type { Lane } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -22,22 +23,30 @@ export function Swimlane({
   onDropTaskInLane,
   onOpenAddTaskDialog,
 }: SwimlaneProps) {
+  const headerStyle = lane.color ? { backgroundColor: lane.color } : {};
+  const titleStyle = lane.textColor ? lane.textColor : 'text-card-foreground';
+  const buttonColorClass = lane.textColor || 'text-primary';
+
+
   return (
     <Card
-      className="w-[300px] md:w-[350px] h-[calc(100vh-10rem)] flex flex-col shrink-0 bg-card shadow-lg rounded-lg"
+      className="w-full h-[calc(100vh-12rem)] md:h-[calc(100vh-14rem)] flex flex-col shrink-0 bg-card shadow-lg rounded-lg"
       onDragOver={onDragOverLane}
       onDrop={(e) => onDropTaskInLane(e, lane.id)}
       aria-labelledby={`lane-title-${lane.id}`}
     >
-      <CardHeader className="p-4 border-b border-border">
+      <CardHeader 
+        className="p-4 border-b border-border"
+        style={headerStyle}
+      >
         <div className="flex justify-between items-center">
-          <CardTitle id={`lane-title-${lane.id}`} className="text-lg font-semibold text-card-foreground">{lane.title}</CardTitle>
+          <CardTitle id={`lane-title-${lane.id}`} className={`text-lg font-semibold ${titleStyle}`}>{lane.title}</CardTitle>
           <Button
             variant="ghost"
             size="icon"
             onClick={() => onOpenAddTaskDialog(lane.id)}
             aria-label={`Add task to ${lane.title}`}
-            className="text-primary hover:text-primary/80"
+            className={`hover:opacity-80 ${buttonColorClass}`}
           >
             <PlusCircle className="h-6 w-6" />
           </Button>
@@ -54,6 +63,8 @@ export function Swimlane({
                 task={task}
                 laneId={lane.id}
                 onDragStart={onDragStartTask}
+                laneColor={lane.color}
+                laneTextColor={lane.textColor}
               />
             ))
           )}

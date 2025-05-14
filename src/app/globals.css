@@ -8,14 +8,14 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 96.1%; /* light gray #F5F5F5 */
-    --foreground: 0 0% 3.9%; /* dark text for contrast */
+    --background: 0 0% 98%; /* very light gray */
+    --foreground: 0 0% 15%; /* dark gray for text */
 
     --card: 0 0% 100%; /* white */
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 0 0% 15%;
 
     --primary: 207 70% 53%; /* blue #3498db */
     --primary-foreground: 0 0% 100%; /* white */
@@ -24,7 +24,7 @@ body {
     --secondary-foreground: 0 0% 100%; /* white */
 
     --muted: 0 0% 92%; /* slightly different gray for muted elements */
-    --muted-foreground: 0 0% 40%; /* adjusted for better contrast on muted */
+    --muted-foreground: 0 0% 45%; /* adjusted for better contrast on muted */
 
     --accent: 24 80% 52%; /* orange #e67e22 */
     --accent-foreground: 0 0% 100%; /* white */
@@ -33,7 +33,7 @@ body {
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 88%; /* adjusted border color */
-    --input: 0 0% 88%; /* adjusted input background */
+    --input: 0 0% 92%; /* adjusted input background for better contrast */
     --ring: 207 70% 53%; /* primary blue for focus rings */
 
     --radius: 0.5rem;
